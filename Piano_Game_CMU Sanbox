@@ -1,0 +1,182 @@
+# Initial Setup and song options
+Rect(0,0,400,400,fill='lightPink')
+Label("Try a song from the list below:",200,10,font="monospace",size=14.5,bold=True)
+Label("Frere Jacques",200,30,font="monospace",size=14.5, bold=True)
+Label("Ode to Joy",200,45,font="monospace",size=14.5, bold=True)
+Label("Twinkle Twinkle Little Star",200,60,font="monospace",size=14.5, bold=True)
+Label("Mary had a Little Lamb",200,75,font="monospace",size=14.5, bold=True)
+Label("Happy Birthday",200,90,font="monospace",size=14.5, bold=True)
+Line(10,145,390,145,dashes=True)
+
+#Points counter and label
+Points= Label(0,120,170,size=25,font='monospace',bold=True)
+Label("Score:",55,170,font="monospace",size=25,fill='black',bold=True)
+
+# Keys
+Rect(6,255,47,144,fill="white",borderWidth=2,border='black')
+Label("C", 29,380,font="Monospace",size=25,bold=True)
+Rect(55,255,47,144,fill="white", borderWidth=2,border= 'black')
+Label("D",79,380,font="Monospace",size=25,bold=True)
+Rect(37,255,35,90)
+Label("C#",55,309,font="Monospace",size=22,bold=True,fill="white")
+Label("Db",55,330,font="Monospace",size=22,bold=True,fill="white")
+Rect(104,255,47,144,fill= "white", borderWidth=2, border= 'black')
+Label("E",127,380,font="Monospace",size=25,bold=True)
+Rect(85,255,35,90)
+Label("D#",102,309,font= "Monospace",size=22,bold=True,fill="white")
+Label("Eb",102,330,font="Monospace",size=22,bold=True,fill="white")
+Rect(153,255,47,144,fill= "white", borderWidth=2,border='black')
+Label("F",177,380,font="Monospace", size=25,bold=True)
+Rect(202,255,47,144,fill="white", borderWidth=2,border= 'black')
+Label("G",225,380,font="Monospace",size=25,bold=True)
+Rect(184,255,35,90)
+Label("F#",201,309,font="Monospace",size=22,bold=True,fill="white")
+Label("Gb",201,330,font="Monospace",size=22,bold=True,fill="white")
+Rect(251,255,47,144,fill="white", borderWidth=2,border='black')
+Label("A",274,380,font="Monospace", size=25,bold=True)
+Rect(233,255,35,90)
+Label("G#",251,309,font="Monospace", size=22,bold=True,fill= "white")
+Label("Ab",251,330,font="Monospace",size=22,bold=True,fill="white")
+Rect(300,255,47,144,fill="white", borderWidth=2,border='black')
+Label("B",324,380,font= "Monospace", size=25,bold=True)
+Rect(282,255,35,90)
+Label("A#",300,309,font="Monospace", size=22,bold=True,fill= "white")
+Label("Bb",300,330,font="Monospace",size=22,bold=True,fill="white")
+Rect(349,255,45,144,fill="white",borderWidth=2,border='black')
+Label("C",372,380,font="Monospace",size=25,bold=True)
+Rect(3,200,394,55)
+Label("~ Piano ~",197,226,font="cursive",size=50,fill='white')
+Line(150,145,150,200,dashes=True)
+
+# Recieve song choice input from the user
+Answer=app.getTextInput('What song would you like to try')
+if Answer in ['Frere Jacques', 'Ode to Joy', 'Twinkle Twinkle Little Star', 'Mary had a Little Lamb', 'Happy Birthday']:
+    Rect(6,255,47,144,fill="white",borderWidth=2,border='black')
+    Rect(55,255,47,144,fill="white",borderWidth=2,border='black')
+    Rect(37,255,35,90)
+    Rect(104,255,47,144,fill="white",borderWidth=2,border='black')
+    Rect(85,255,35,90)
+    Rect(153,255,47,144,fill="white",borderWidth=2,border='black')
+    Rect(202,255,47,144,fill="white",borderWidth=2,border='black')
+    Rect(184,255,35,90)
+    Rect(251,255,47,144,fill="white",borderWidth=2,border='black')
+    Rect(233,255,35,90)
+    Rect(300,255,47,144,fill="white",borderWidth=2,border='black')
+    Rect(282,255,35,90)
+    Rect(349,255,45,144,fill="white",borderWidth=2,border='black')
+    Label("Find the key for the note:",275,160,font="monospace",size=15.5,bold=True)
+else:
+    second_Answer=app.getTextInput('Try re-entering your song or a different song')
+
+# Song Choices    
+# Frere Jacques    
+index = 0
+if Answer == 'Frere Jacques':
+    Frere = ['Middle C', 'D', 'E', 'Middle C', 'Middle C', 'D', 'E', 'Middle C', 'E', 'F', 'G', 'E', 'F', 'G', 'G', 'A', 'G', 'F', 'E', 'Middle C', 'G', 'A', 'G', 'F', 'E', 'Middle C', 'Middle C', 'G', 'Middle C', 'Middle C', 'G', 'Middle C']
+    sheet_music = Frere
+    Rect(210,170,130,30,fill='lightPink')
+    Label(Frere[index],272,183,font='monospace',size=25,bold=True)
+    Label ('Frere Jacques', 200, 130, font='monospace', size= 22, bold=True)
+# Ode to Joy
+index = 0
+if Answer == 'Ode to Joy':
+    Ode = ['E', 'E', 'F', 'G', 'G', 'F', 'E', 'D', 'Middle C', 'Middle C', 'D', 'E', 'E', 'D', 'D', 'E', 'E', 'F', 'G', 'G', 'F', 'E', 'D', 'Middle C', 'Middle C', 'D', 'E', 'E', 'Middle C', 'Middle C', 'D', 'D', 'E', 'Middle C', 'D', 'F', 'E', 'Middle C', 'D', 'F', 'E','D', 'Middle C', 'D', 'G', 'E', 'E', 'F', 'G', 'G', 'F', 'E', 'D', 'Middle C', 'Middle C', 'D', 'E', 'E', 'Middle C', 'Middle C']
+    sheet_music = Ode
+    Rect(210,170,130,30,fill='lightPink')
+    Label(Ode[index],272,183,font='monospace',size=25,bold=True)
+    Label ('Ode to Joy', 200, 130, font='monospace', size= 22, bold=True) 
+# Twinkle Twinkle Little Star    
+index = 0
+if Answer == 'Twinkle Twinkle Little Star':
+    Twinkle = ['Middle C', 'Middle C', 'G', 'G', 'A', 'A', 'G', 'F', 'F', 'E', 'E', 'D', 'D', 'Middle C', 'G', 'G', 'F', 'F', 'E', 'E', 'D', 'G', 'G', 'F', 'F', 'E', 'E', 'D', 'Middle C', 'Middle C', 'G', 'G', 'A', 'A', 'G', 'F', 'F','E', 'E', 'D', 'D', 'Middle C']
+    sheet_music = Twinkle
+    Rect(210,170,130,30,fill='lightPink')
+    Label(Twinkle[index],272,183,font='monospace',size=25,bold=True)
+    Label ('Twinkle Twinkle Little Star', 200, 130, font='monospace', size= 22, bold=True)
+# Mary had a Little Lamb
+elif Answer == 'Mary had a Little Lamb':
+    Mary = ['E', 'D', 'Middle C', 'D', 'E', 'E', 'E', 'D', 'D', 'D', 'E', 'G', 'G', 'E', 'D', 'Middle C', 'D', 'E', 'E', 'E', 'E', 'D', 'D', 'E', 'D', 'Middle C', 'D', 'E', 'D', 'Middle C', 'D', 'E', 'E', 'E', 'D', 'D', 'D', 'E', 'G', 'G', 'E', 'D', 'Middle C', 'D', 'E', 'E', 'E', 'E', 'D', 'D', 'E', 'D', 'Middle C']
+    sheet_music = Mary
+    Rect(210,170,130,30,fill='lightPink')
+    Label(Mary[index],272,183,font='monospace',size=25,bold=True)
+    Label ('Mary had a Little Lamb', 200, 130, font='monospace', size= 22, bold=True)
+# Happy Birthday
+elif Answer == 'Happy Birthday':
+    Happy = ['Middle C', 'Middle C', 'D', 'Middle C', 'F', 'E', 'Middle C', 'Middle C', 'D', 'Middle C', 'G', 'F', 'Middle C', 'Middle C', 'High C', 'A', 'F', 'E', 'D', 'A#/Bb', 'A#/Bb', 'A', 'F', 'G', 'F']
+    sheet_music = Happy
+    Rect(210,170,130,30,fill='lightPink')
+    Label(Happy[index],272,183,font='monospace',size=25,bold=True)
+    Label ('Happy Birthday', 200, 130, font='monospace', size= 22, bold=True)
+
+# Note sound files
+# Playing the Piano
+Current_Sound = None
+def onMousePress(x,y):
+    global index, sheet_music, Points, Current_Sound
+    if index < len(sheet_music):
+        note = sheet_music[index]
+        clicked_correct_key = False
+        if ((sheet_music[index] =='Middle C') and (6<x<37 and 255<y<399) or (37<x<53 and 345<y<399)):
+            SoundURL = 'cmu://1134220/42107224/448549__tedagame__c4.ogg'
+            clicked_correct_key = True
+        elif ((sheet_music[index] =='D') and (55<x<102 and 345<y<399) or (72<x<85 and 255<y<345)):
+            SoundURL = 'cmu://1134220/42107237/448609__tedagame__d4.ogg'
+            clicked_correct_key = True
+        elif ((sheet_music[index] =='C#/Db') and (37<x<72 and 255<y<345)):
+            SoundURL = 'cmu://1134220/42107329/448539__tedagame__c4.ogg'
+            clicked_correct_key = True
+        elif ((sheet_music[index]=='E') and (120<x<151 and 255<y<399) or (104<x<120 and 345<y<399)):
+            SoundURL = 'cmu://1134220/42107229/448613__tedagame__e4.ogg'
+            clicked_correct_key = True
+        elif ((sheet_music[index]=='D#/Eb') and (85<x<120 and 255<y<345)):
+            SoundURL = 'cmu://1134220/42107256/448602__tedagame__d4.ogg'
+            clicked_correct_key = True
+        elif ((sheet_music[index]=='F') and (153<x<184 and 255<y<399) or (184<x<200 and 345<y<399)):
+            SoundURL = 'cmu://1134220/42107267/448595__tedagame__f4.ogg'
+            clicked_correct_key = True
+        elif ((sheet_music [index] =='G') and (202<x<248 and 345<y<399) or (219<x<233 and 255<y<345)):
+            SoundURL = 'cmu://1134220/42107306/448552__tedagame__g4.ogg'
+            clicked_correct_key = True
+        elif ((sheet_music[index]=='F#/Gb') and (184<x<219 and 255<y<345)):
+            SoundURL = 'cmu://1134220/42107293/448585__tedagame__f4.ogg'
+            clicked_correct_key = True
+        elif ((sheet_music[index] =='A') and (251<x<298 and 345<y<399) or (268<x<282 and 255<y<345)):
+            SoundURL = 'cmu://1134220/42107299/448561__tedagame__a4.ogg'
+            clicked_correct_key = True
+        elif ((sheet_music[index]== 'G#/Ab') and (233<x<268 and 255<y<345)):
+            SoundURL = 'cmu://1134220/42107278/448592__tedagame__g4.ogg'
+            clicked_correct_key = True
+        elif ((sheet_music[index]=='A#/Bb') and (282<x<317 and 255<y<345)):
+            SoundURL = 'cmu://1134220/42107296/448577__tedagame__a4.ogg'
+            clicked_correct_key = True
+        elif ((sheet_music[index] =='B') and (317<x<347 and 255<y<399) or (300<x<317 and 345<y<399)):
+            SoundURL = 'cmu://1134220/42107326/448536__tedagame__b4.ogg'
+            clicked_correct_key = True
+        elif ((sheet_music[index]=='High C') and (349<x<394 and 255<y<399)):
+            SoundURL = 'cmu://1134220/42107316/448548__tedagame__c5.ogg'
+            clicked_correct_key = True
+        else:
+            Rect(190,170,160,30,fill='lightPink')
+            Label('Try Again!',272,183,font='monospace',size=25,bold=True)
+            star= Star(x,y, 12, 5, fill='purple', border=None)
+            sleep(.25)
+            star.visible = False
+            Rect(190,170,160,30,fill='lightPink')
+            Label(sheet_music[index],272,183,font='monospace',size=25,bold=True)
+            Points.value -= 1
+            return
+        if clicked_correct_key:
+            if Current_Sound:
+                Current_Sound.pause()
+        Current_Sound = Sound(SoundURL)
+        Current_Sound.play()
+        index = index + 1
+        Points.value += 1
+        Rect(210,170,130,30,fill='lightPink')
+        if index < len(sheet_music):
+            Label(sheet_music[index], 272,183,font='monospace',size=25,bold=True)
+            star= Star(x,y, 12, 5, fill='purple', border=None)
+            sleep (.25)
+            star.visible = False
+        else:
+            Label('All Done!', 272,183,font='monospace',size=25,bold=True)
